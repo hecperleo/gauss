@@ -388,6 +388,7 @@ void USPManager::RPSChangeFlightStatusCB(const gauss_msgs_mqtt::RPSChangeFlightS
 
 void USPManager::airspaceUpdateCB(const gauss_msgs_mqtt::AirspaceUpdate::ConstPtr& msg) 
 {
+    ROS_INFO("[USPM] Received airspace update message"); // DEBUG
     gauss_msgs::AirspaceUpdate alert_msg;
     // Convert
     alert_msg.id = msg->id;

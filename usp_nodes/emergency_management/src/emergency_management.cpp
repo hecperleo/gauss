@@ -124,7 +124,9 @@ bool threatsCb(gauss_msgs::NewThreatsRequest &_req, gauss_msgs::NewThreatsRespon
             if (tactical_client_.call(tactical_msg)) {
                 int uav_id_smaller_priority = threat.uav_ids.front();
                 if (threat.threat_type == threat.LOSS_OF_SEPARATION) uav_id_smaller_priority = selectSmallerPriority(threat);  // Get the UAV id with less priority
+                ROS_INFO("[Emergency] Threat [%d] with type [%d] has been solved by TD", threat.threat_id, threat.threat_type); // DEBUG
                 notifications_msg.request.notifications.push_back(selectBestSolution(tactical_msg, uav_id_smaller_priority));
+                ROS_INFO("[Emergency] Selected solution for UAV [%d]", notifications_msg.request.notifications.back().uav_id); // DEBUG
             } else {
                 ROS_WARN("[Emergency] Failed to call tactical deconfliction!");
             }

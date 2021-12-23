@@ -367,6 +367,7 @@ bool DataBase::writeGeofenceCB(gauss_msgs::WriteGeofences::Request &req, gauss_m
             }
         }
     }
+    ROS_INFO("Geofences were written on the database!"); // DEBUG
     res.success = true;
     size_plans = saved_geofences.size();
     res.message = "All requested geofences were written on the DataBase";

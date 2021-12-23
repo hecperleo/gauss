@@ -1006,6 +1006,7 @@ int main(int argc, char** argv) {
             return 1;
         }
 
+        ROS_INFO("[Monitoring] Calculating threats..."); // DEBUG
         std::map<std::string, int> icao_to_index_map;
         std::map<int, gauss_msgs::Operation> index_to_operation_map;
         std::map<int, gauss_msgs::Geofence> index_to_geofence_map;
@@ -1081,6 +1082,7 @@ int main(int argc, char** argv) {
                 }
             }
         }
+        ROS_INFO_COND(loss_results_list.size() > 0 || geofence_results_list.size() > 0, "[Monitoring] Threats detected!"); // DEBUG
 
         std::sort(loss_results_list.begin(), loss_results_list.end(), happensBefore);
         gauss_msgs::NewThreats threats_msg;

@@ -589,7 +589,7 @@ bool deconflictCB(gauss_msgs::NewDeconfliction::Request &req, gauss_msgs::NewDec
         default:
             break;
     }
-
+    ROS_INFO("[Tactical] Threat solved!"); // DEBUG
     res.message = "Conflict solved";
     res.success = true;
     return res.success;
