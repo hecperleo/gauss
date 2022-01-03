@@ -90,10 +90,11 @@ void airspaceAlertCb(const gauss_msgs::AirspaceUpdate &_alert) {
     gauss_msgs::Geofence aux_geofence;
     gauss_msgs::WriteGeofences write_geofences_msg;
     aux_geofence.circle = _alert.circle;
+    if (_alert.circle.radius < 1) aux_geofence.circle.radius = 2000.0;
     aux_geofence.cylinder_shape = _alert.cylinder_shape;
     aux_geofence.id = static_cast<uint8_t>(std::stoul(_alert.id));  // String -> int -> uint8_t
     aux_geofence.min_altitude = 0.0;
-    aux_geofence.max_altitude = 600.0;
+    aux_geofence.max_altitude = 1000.0;
     aux_geofence.polygon = _alert.polygon;
     aux_geofence.start_time.fromSec(_alert.date_effective / 1000);
     aux_geofence.end_time.fromSec(_alert.last_updated / 1000 + 600);

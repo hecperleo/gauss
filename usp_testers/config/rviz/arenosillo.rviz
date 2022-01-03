@@ -8,7 +8,7 @@ Panels:
         - /Visualization1
         - /Visualization1/Namespaces1
       Splitter Ratio: 0.861671448
-    Tree Height: 359
+    Tree Height: 778
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -55,8 +55,6 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        3434008:
-          Value: true
         3434009:
           Value: true
         All Enabled: true
@@ -69,8 +67,6 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
-          3434008:
-            {}
           3434009:
             {}
       Update Interval: 0
@@ -80,27 +76,26 @@ Visualization Manager:
       Marker Topic: /visualization_marker_array
       Name: Visualization
       Namespaces:
-        3434008/estimated_trajectory: true
-        3434008/flight_plan: true
-        3434008/flight_plan_updated: true
-        3434008/landing_spots: true
-        3434008/operation_info: true
-        3434008/track: true
-        3434008/volumes/flight_geometry: true
-        3434008/volumes/flight_geometry_spheres: true
-        3434008/volumes/operational_volume: true
-        3434008/volumes/operational_volume_spheres: true
+        3434007/estimated_trajectory: false
+        3434007/flight_plan: false
+        3434007/flight_plan_updated: false
+        3434007/landing_spots: false
+        3434007/operation_info: true
+        3434007/track: false
+        3434007/volumes/flight_geometry: true
+        3434007/volumes/flight_geometry_spheres: false
+        3434007/volumes/operational_volume: true
+        3434007/volumes/operational_volume_spheres: false
         3434009/estimated_trajectory: false
         3434009/flight_plan: false
         3434009/flight_plan_updated: false
         3434009/landing_spots: false
-        3434009/operation_info: false
+        3434009/operation_info: true
         3434009/track: false
         3434009/volumes/flight_geometry: true
         3434009/volumes/flight_geometry_spheres: false
         3434009/volumes/operational_volume: true
         3434009/volumes/operational_volume_spheres: false
-        geofence_3: true
         map: false
       Queue Size: 100
       Value: true
@@ -145,25 +140,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5813.01611
+      Distance: 24639.7988
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1631.51794
-        Y: -1463.8573
-        Z: 823.628967
+        X: 1465.01587
+        Y: -6847.61719
+        Z: -2217.63379
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.339797318
+      Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.89765549
+      Yaw: 4.49265146
     Saved: ~
 Window Geometry:
   Displays:

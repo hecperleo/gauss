@@ -2,7 +2,7 @@
 	"operations": [
 		{
 			"uav_id": 0,
-			"icao_address": "3434007",
+			"icao_address": "3434007", 
 			"frame": "",
 			"autonomy": 10,
 			"priority": 1,
@@ -14,14 +14,14 @@
 				[
 					{
 						"mandatory" : 0,
-						"stamp" : 0,
+						"stamp" : 693,
 						"x" : 1423.2632422028146,
 						"y" : -11529.103678380196,
 						"z" : 500.39057364491509
 					},
 					{
 						"mandatory" : 0,
-						"stamp" : 933,
+						"stamp" : 873,
 						"x" : -6359.5776191617324,
 						"y" : -5237.3900667229373,
 						"z" : 500.67697132470494
@@ -94,7 +94,7 @@
 			},
 			"flight_geometry": 100.0,
 			"operational_volume": 150.0,
-			"conop": "Forest Surveilance"
+			"conop": "SCRAB"
 		}, 
 		{
 			"uav_id": 1,
@@ -110,7 +110,7 @@
 				[
 					{
 						"mandatory" : 0,
-						"stamp" : 0,
+						"stamp" : 5,
 						"x" : -7372.3610217154264,
 						"y" : -7619.1286074666968,
 						"z" : 700.18018781945693
@@ -211,7 +211,7 @@
 			},
 			"flight_geometry": 80.0,
 			"operational_volume": 100.0,
-			"conop": "Precision agriculture"
+			"conop": "ATLANTIC"
 		}
 	]
 }

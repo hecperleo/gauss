@@ -242,7 +242,7 @@ std::vector<gauss_msgs::Waypoint> findAlternativePathRadial(gauss_msgs::Waypoint
     auto final_angle = atan2(_final_vector.y, _final_vector.x);
     auto delta_angle = atan2(sin(final_angle - init_angle), cos(final_angle - init_angle));
     auto arc_lenght = _geofence.circle.radius * std::fabs(delta_angle);
-    float min_solution_segment_lenght = 100.0;  // [m] TODO: as a param?
+    float min_solution_segment_lenght = 400.0;  // [m] TODO: as a param?
     int segment_count = static_cast<int>(std::max(2.0, std::floor(arc_lenght / min_solution_segment_lenght)));
     auto step_angle = delta_angle / segment_count;
     auto z_step = (_p_end.z - _p_init.z) / segment_count;
@@ -453,7 +453,7 @@ bool deconflictCB(gauss_msgs::NewDeconfliction::Request &req, gauss_msgs::NewDec
                 possible_solution.uav_id = req.threat.conflictive_operations.at(i).uav_id;
                 possible_solution.cost = possible_solution.riskiness = fake_value;
                 possible_solution.waypoint_list.push_back(req.threat.conflictive_operations.at(i).estimated_trajectory.waypoints.front());
-                req.threat.conflictive_operations.at(i).landing_spots.waypoints.front().stamp.fromSec(ros::Time::now().toSec() + 360.0);
+                req.threat.conflictive_operations.at(i).landing_spots.waypoints.front().stamp.fromSec(ros::Time::now().toSec() + 180.0);
                 possible_solution.waypoint_list.push_back(req.threat.conflictive_operations.at(i).landing_spots.waypoints.front());
                 res.deconfliction_plans.push_back(possible_solution);
             }
